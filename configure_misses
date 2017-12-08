@@ -1,0 +1,14 @@
+Configure miss: asciidoc
+Configure miss: _fullpath
+Configure miss: _fseeki64
+Configure miss: _chsize
+Configure miss: _chsize_s
+Configure miss: _fileno
+Configure miss: _filelengthi64
+Configure miss: _access
+Configure miss: struct _stati64
+Configure miss: _stati64
+Configure miss: _fstati64
+Configure miss: if gcc accepts -Werror=unknown-warning-option
+Configure miss: if gcc accepts -Wpedantic-ms-format
+Configure miss: if gcc accepts -Werror=strict-prototypes

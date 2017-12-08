@@ -1,0 +1,5 @@
+# This file contains recursive sources that require this package
+edk2
+isa-l
+libjpeg-turbo
+libvpx
