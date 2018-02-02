@@ -4,7 +4,7 @@
 #
 Name     : nasm
 Version  : 2.13.02
-Release  : 23
+Release  : 24
 URL      : http://www.nasm.us/pub/nasm/releasebuilds/2.13.02/nasm-2.13.02.tar.xz
 Source0  : http://www.nasm.us/pub/nasm/releasebuilds/2.13.02/nasm-2.13.02.tar.xz
 Summary  : The Netwide Assembler, a portable x86 assembler with Intel-like syntax
