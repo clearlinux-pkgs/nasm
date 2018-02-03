@@ -2,4 +2,5 @@
 edk2
 isa-l
 libjpeg-turbo
+libjpeg-turbo-soname8
 libvpx

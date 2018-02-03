@@ -4,7 +4,7 @@
 #
 Name     : nasm
 Version  : 2.13.02
-Release  : 24
+Release  : 25
 URL      : http://www.nasm.us/pub/nasm/releasebuilds/2.13.02/nasm-2.13.02.tar.xz
 Source0  : http://www.nasm.us/pub/nasm/releasebuilds/2.13.02/nasm-2.13.02.tar.xz
 Summary  : The Netwide Assembler, a portable x86 assembler with Intel-like syntax
@@ -45,7 +45,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1512764532
+export SOURCE_DATE_EPOCH=1517701390
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -57,7 +57,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make TEST_VERBOSE=1 test || :
 
 %install
-export SOURCE_DATE_EPOCH=1512764532
+export SOURCE_DATE_EPOCH=1517701390
 rm -rf %{buildroot}
 %make_install
 
