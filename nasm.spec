@@ -4,7 +4,7 @@
 #
 Name     : nasm
 Version  : 2.13.03
-Release  : 27
+Release  : 28
 URL      : http://www.nasm.us/pub/nasm/releasebuilds/2.13.03/nasm-2.13.03.tar.xz
 Source0  : http://www.nasm.us/pub/nasm/releasebuilds/2.13.03/nasm-2.13.03.tar.xz
 Summary  : The Netwide Assembler, a portable x86 assembler with Intel-like syntax
@@ -15,6 +15,7 @@ Requires: nasm-doc
 BuildRequires : asciidoc
 BuildRequires : groff
 BuildRequires : xmlto
+Patch1: drop-unused-seg_init.patch
 
 %description
 NASM is the Netwide Assembler, a free portable assembler for the Intel
@@ -39,13 +40,14 @@ doc components for the nasm package.
 
 %prep
 %setup -q -n nasm-2.13.03
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1518051799
+export SOURCE_DATE_EPOCH=1526497221
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -57,7 +59,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make TEST_VERBOSE=1 test || :
 
 %install
-export SOURCE_DATE_EPOCH=1518051799
+export SOURCE_DATE_EPOCH=1526497221
 rm -rf %{buildroot}
 %make_install
 
