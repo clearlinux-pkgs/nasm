@@ -1,3 +1,4 @@
+Configure miss: strrchrnul
 Configure miss: _fullpath
 Configure miss: _fseeki64
 Configure miss: _chsize
@@ -5,9 +6,27 @@ Configure miss: _chsize_s
 Configure miss: _fileno
 Configure miss: _filelengthi64
 Configure miss: _access
+Configure miss: intrin.h usability
+Configure miss: intrin.h presence
+Configure miss: intrin.h
+Configure miss: _BitScanReverse
+Configure miss: _BitScanReverse64
 Configure miss: struct _stati64
 Configure miss: _stati64
 Configure miss: _fstati64
+Configure miss: whether strrchrnul is declared
+Configure miss: machine/endian.h usability
+Configure miss: machine/endian.h presence
+Configure miss: machine/endian.h
+Configure miss: cpu_to_le16
+Configure miss: cpu_to_le32
+Configure miss: cpu_to_le64
+Configure miss: __cpu_to_le16
+Configure miss: __cpu_to_le32
+Configure miss: __cpu_to_le64
+Configure miss: _byteswap_ushort
+Configure miss: _byteswap_ulong
+Configure miss: _byteswap_uint64
 Configure miss: if gcc accepts -Werror=unknown-warning-option
 Configure miss: if gcc accepts -Wpedantic-ms-format
 Configure miss: if gcc accepts -Werror=strict-prototypes
