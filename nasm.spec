@@ -4,7 +4,7 @@
 #
 Name     : nasm
 Version  : 2.14
-Release  : 29
+Release  : 30
 URL      : http://www.nasm.us/pub/nasm/releasebuilds/2.14/nasm-2.14.tar.xz
 Source0  : http://www.nasm.us/pub/nasm/releasebuilds/2.14/nasm-2.14.tar.xz
 Summary  : The Netwide Assembler, a portable x86 assembler with Intel-like syntax
@@ -16,6 +16,7 @@ Requires: nasm-man = %{version}-%{release}
 BuildRequires : asciidoc
 BuildRequires : groff
 BuildRequires : xmlto
+Patch1: CVE-2018-19755.patch
 
 %description
 NASM is the Netwide Assembler, a free portable assembler for the Intel
@@ -50,13 +51,18 @@ man components for the nasm package.
 
 %prep
 %setup -q -n nasm-2.14
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541641929
+export SOURCE_DATE_EPOCH=1543614766
+export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -68,7 +74,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make TEST_VERBOSE=1 test || :
 
 %install
-export SOURCE_DATE_EPOCH=1541641929
+export SOURCE_DATE_EPOCH=1543614766
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/nasm
 cp LICENSE %{buildroot}/usr/share/package-licenses/nasm/LICENSE
