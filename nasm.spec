@@ -4,7 +4,7 @@
 #
 Name     : nasm
 Version  : 2.14.02
-Release  : 33
+Release  : 34
 URL      : http://www.nasm.us/pub/nasm/releasebuilds/2.14.02/nasm-2.14.02.tar.xz
 Source0  : http://www.nasm.us/pub/nasm/releasebuilds/2.14.02/nasm-2.14.02.tar.xz
 Summary  : The Netwide Assembler, a portable x86 assembler with Intel-like syntax
@@ -17,6 +17,7 @@ BuildRequires : asciidoc
 BuildRequires : groff
 BuildRequires : xmlto
 Patch1: CVE-2018-19755.patch
+Patch2: CVE-2019-14248.patch
 
 %description
 NASM is the Netwide Assembler, a free portable assembler for the Intel
@@ -27,7 +28,6 @@ instruction mnemonics and syntax.
 Summary: bin components for the nasm package.
 Group: Binaries
 Requires: nasm-license = %{version}-%{release}
-Requires: nasm-man = %{version}-%{release}
 
 %description bin
 bin components for the nasm package.
@@ -52,29 +52,34 @@ man components for the nasm package.
 %prep
 %setup -q -n nasm-2.14.02
 %patch1 -p1
+%patch2 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1545837116
-export CFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-export FCFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-export FFLAGS="$CFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
-export CXXFLAGS="$CXXFLAGS -fstack-protector-strong -mzero-caller-saved-regs=used "
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1565986657
+export GCC_IGNORE_WERROR=1
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 -fstack-protector-strong -mzero-caller-saved-regs=used "
 %configure --disable-static
 make  %{?_smp_mflags}
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 make TEST_VERBOSE=1 test || :
 
 %install
-export SOURCE_DATE_EPOCH=1545837116
+export SOURCE_DATE_EPOCH=1565986657
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/nasm
 cp LICENSE %{buildroot}/usr/share/package-licenses/nasm/LICENSE
