@@ -1,4 +1,5 @@
 Configure miss: if gcc accepts -Werror=unknown-warning-option
+Configure miss: if gcc accepts -ftrivial-auto-var-init=zero
 Configure miss: strrchrnul
 Configure miss: _fullpath
 Configure miss: _fseeki64
@@ -29,8 +30,8 @@ Configure miss: _byteswap_ushort
 Configure miss: _byteswap_ulong
 Configure miss: _byteswap_uint64
 Configure miss: if gcc supports the malloc function attribute on pointers
-Configure miss: if gcc supports the alloc_size function attribute
-Configure miss: if gcc supports the alloc_size function attribute on pointers
+Configure miss: if gcc supports the alloc_size(1,2) function attribute
+Configure miss: if gcc supports the alloc_size(1,2) function attribute on pointers
 Configure miss: if gcc supports the pure function attribute on pointers
 Configure miss: if gcc supports the cold function attribute on pointers
 Configure miss: if gcc accepts -Wc99-compat
