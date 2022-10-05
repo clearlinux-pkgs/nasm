@@ -1,9 +1,8 @@
 # This file contains recursive sources that require this package
-compat-libvpx-soname5
 edk2
+ipp-crypto
 isa-l
 libjpeg-turbo
-libjpeg-turbo-soname8
 libreoffice
 libvpx
 xrdp
