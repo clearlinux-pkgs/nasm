@@ -18,9 +18,9 @@ Configure miss: _stati64
 Configure miss: cpu_to_le16
 Configure miss: cpu_to_le32
 Configure miss: cpu_to_le64
+Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: if gcc accepts -Wc99-compat
 Configure miss: if gcc accepts -Wc99-extensions
-Configure miss: if gcc accepts -Werror=strict-prototypes
 Configure miss: if gcc accepts -Werror=unknown-warning-option
 Configure miss: if gcc accepts -Wpedantic-ms-format
 Configure miss: if gcc supports the alloc_size(1,2) function attribute
@@ -29,11 +29,8 @@ Configure miss: if gcc supports the cold function attribute on pointers
 Configure miss: if gcc supports the malloc function attribute on pointers
 Configure miss: if gcc supports the pure function attribute on pointers
 Configure miss: intrin.h
-Configure miss: intrin.h presence
-Configure miss: intrin.h usability
 Configure miss: machine/endian.h
-Configure miss: machine/endian.h presence
-Configure miss: machine/endian.h usability
+Configure miss: mempset
 Configure miss: strrchrnul
 Configure miss: struct _stati64
 Configure miss: whether strrchrnul is declared
