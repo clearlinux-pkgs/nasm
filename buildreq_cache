@@ -1,4 +1,5 @@
 2.16.01
 asciidoc
 groff
+perl(Getopt::Long)
 xmlto
