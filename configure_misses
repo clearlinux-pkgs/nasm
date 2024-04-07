@@ -1,36 +1,64 @@
 Configure miss: S_ISREG
+Configure miss: S_ISREG
+Configure miss: _BitScanReverse
 Configure miss: _BitScanReverse
 Configure miss: _BitScanReverse64
+Configure miss: _BitScanReverse64
+Configure miss: __cpu_to_le16
 Configure miss: __cpu_to_le16
 Configure miss: __cpu_to_le32
+Configure miss: __cpu_to_le32
+Configure miss: __cpu_to_le64
 Configure miss: __cpu_to_le64
 Configure miss: _access
+Configure miss: _access
+Configure miss: _byteswap_uint64
 Configure miss: _byteswap_uint64
 Configure miss: _byteswap_ulong
+Configure miss: _byteswap_ulong
+Configure miss: _byteswap_ushort
 Configure miss: _byteswap_ushort
 Configure miss: _chsize
+Configure miss: _chsize
+Configure miss: _chsize_s
 Configure miss: _chsize_s
 Configure miss: _fileno
+Configure miss: _fileno
+Configure miss: _fseeki64
 Configure miss: _fseeki64
 Configure miss: _fstati64
+Configure miss: _fstati64
+Configure miss: _fullpath
 Configure miss: _fullpath
 Configure miss: _stati64
+Configure miss: _stati64
+Configure miss: cpu_to_le16
 Configure miss: cpu_to_le16
 Configure miss: cpu_to_le32
+Configure miss: cpu_to_le32
+Configure miss: cpu_to_le64
 Configure miss: cpu_to_le64
 Configure miss: gcc options needed to detect all undeclared functions
-Configure miss: if gcc accepts -Wc99-compat
-Configure miss: if gcc accepts -Wc99-extensions
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: if gcc accepts -Werror=unknown-warning-option
 Configure miss: if gcc accepts -Werror=unknown-warning-option
 Configure miss: if gcc accepts -Wpedantic-ms-format
-Configure miss: if gcc supports the alloc_size(1,2) function attribute
-Configure miss: if gcc supports the alloc_size(1,2) function attribute on pointers
+Configure miss: if gcc accepts -Wpedantic-ms-format
+Configure miss: if gcc supports the cold function attribute on pointers
 Configure miss: if gcc supports the cold function attribute on pointers
 Configure miss: if gcc supports the malloc function attribute on pointers
+Configure miss: if gcc supports the malloc function attribute on pointers
+Configure miss: if gcc supports the pure function attribute on pointers
 Configure miss: if gcc supports the pure function attribute on pointers
 Configure miss: intrin.h
+Configure miss: intrin.h
+Configure miss: machine/endian.h
 Configure miss: machine/endian.h
 Configure miss: mempset
+Configure miss: mempset
+Configure miss: strrchrnul
 Configure miss: strrchrnul
 Configure miss: struct _stati64
+Configure miss: struct _stati64
+Configure miss: whether strrchrnul is declared
 Configure miss: whether strrchrnul is declared

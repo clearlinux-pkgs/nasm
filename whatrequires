@@ -1,6 +1,7 @@
 # This file contains recursive sources that require this package
 compat-ffmpeg-4.4
 compat-libvpx-soname7
+compat-libvpx-soname8
 edk2
 intel-ipsec-mb
 ipp-crypto
